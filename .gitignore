@@ -1,0 +1,8 @@
+resources/dist
+resources/node_modules
+resources/package-lock.json
+compile-error-log.txt
+pack-log.txt
+options.json
+PackedMod.js
+mod

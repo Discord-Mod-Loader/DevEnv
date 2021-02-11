@@ -1,0 +1,26 @@
+{
+  "name": "dev-env",
+  "version": "1.0.0",
+  "description": "The resources required to make a valid mod project work",
+  "main": "dist/Pack.js",
+  "scripts": {
+    "start": "node dist/Pack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Discord-Mod-Loader/devEnv",
+    "directory": "resources"
+  },
+  "author": "SMJS",
+  "license": "MIT",
+  "dependencies": {
+    "@stephen-riley/pcre": "^0.9.0",
+    "clean-css": "^5.0.1",
+    "html-minifier-terser": "^5.1.1",
+    "terser": "^5.6.0-beta"
+  },
+  "devDependencies": {
+    "@types/clean-css": "^4.2.3",
+    "@types/html-minifier-terser": "^5.1.1"
+  }
+}
