@@ -28,6 +28,7 @@ export class CheckFileState {
             // Scan the class file to make sure that it's actually a class and only a class
             const { containsClass, isClassOnly } = new ScanClassFile(codeOnlyFile);
 
+            // No class was found at the start of the code
             if (!containsClass) {
                 return console.error("The code doesn't contain a valid class");
             }
