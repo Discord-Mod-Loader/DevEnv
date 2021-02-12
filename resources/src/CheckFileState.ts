@@ -12,13 +12,13 @@ export class CheckFileState {
 
         // Minify the code
         minify(file).then(({ code }) => {
-            // Makes it easier to check without invalid catches
-            const codeOnlyFile = code?.replace(/(["'`]).*?\1|\/.*?(?<!\\)\//g, "");
-
             // What???? no really, WHAT???????????
-            if (!codeOnlyFile) {
+            if (!code) {
                 return console.error("IDK how you managed this but your code wasn't in the minify output");
             }
+
+            // Makes it easier to check without invalid catches
+            const codeOnlyFile = code?.replace(/(["'`]).*?\1|\/.*?(?<!\\)\//g, "");
 
             // Just a simple scan which will check if a blacklisted method is used
             if (blackListed.some((word) => new RegExp(word + "\\s{0,}\\(").test(codeOnlyFile))) {
